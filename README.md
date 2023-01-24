@@ -31,7 +31,7 @@ pip install pymongo # installing mongo db library
 
 from pymongo import MongoClient # Importing Mongo db cloud server library
 
-Tweet = MongoClient("mongodb://Itsmesatheesh123:Itsmesatheesh123@ac-wpuz2t4-shard-00-00.amauozb.mongodb.net:27017,ac-wpuz2t4-shard-00-01.amauozb.mongodb.net:27017,ac-wpuz2t4-shard-00-02.amauozb.mongodb.net:27017/?ssl=true&replicaSet=atlas-lqxz0q-shard-0&authSource=admin&retryWrites=true&w=majority")
+Tweet = MongoClient("mongodb://username:<password>@ac-wpuz2t4-shard-00-00.amauozb.mongodb.net:27017,ac-wpuz2t4-shard-00-01.amauozb.mongodb.net:27017,ac-wpuz2t4-shard-00-02.amauozb.mongodb.net:27017/?ssl=true&replicaSet=atlas-lqxz0q-shard-0&authSource=admin&retryWrites=true&w=majority")
 
 Tweeterscraping = Tweet["Tweeter_task"] # creating a database in Mongodb server
 Tweets = Tweeterscraping["Elon_Task"]
