@@ -2,11 +2,10 @@ import streamlit as st
 import twint
 import pandas as pd
 import json
-from functions import convert_df, comprehend
 import botocore
 
 
-# Set page name and favicon
+
 st.set_page_config(page_title='Twitter scraper',page_icon=':iphone:')
 
 
@@ -18,7 +17,6 @@ Scrape some Twitter Tweets and Download:
 languages = []
 sentiments = []
 
-# customize form
 with st.form(key='Twitter_form'):
     search_term = st.text_input('What do you want to search for?')
     limit = st.slider('How many tweets do you want to get?', 0, 500, step=20)
@@ -40,7 +38,7 @@ with st.form(key='Twitter_form'):
         if c.Store_csv:
             c.Output = f'{file_name}.csv'
             
-         if c.Store_json:
+        if c.Store_json:
             c.Output = f'{file_name}.json'
 
         twint.run.Search(c)
